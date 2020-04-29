@@ -27,8 +27,6 @@ Mirror Effect
 
 Neon Effect
 
-![Testing]()
-
 Video demostrativo Neon/Mirror effect
 (Da click en la imagen)
 
