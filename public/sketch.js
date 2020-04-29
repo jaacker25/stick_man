@@ -1,7 +1,6 @@
 let video;
 let poseNet;
 let point;
-let gap;
 let img;
 let shade;
 
@@ -50,16 +49,22 @@ function modelLoaded() {
 function draw() {
 
  //with real time video background 
-// translate(width,0);
-// scale(-1.0,1.0);  
-// image(video, 0, 0);  
+ translate(width,0);
+ scale(-1.0,1.0);  
+//GOST effect
+// tint(0, 0, 0, 20);
+ image(video, 0, 0);
+ noStroke();
+ fill(0,200); 
+rect(0,0,width,height);
+noFill();
 
  //with static image background 
  //image(img, 0, 0);   
 
  //with black solid color background 
 
-  background(0);
+ //background(0);
  
   
   if(point){
@@ -82,17 +87,13 @@ function draw() {
   neckPoint.x=point[0].position.x;
   neckPoint.y=point[0].position.y+(sizeHead/2);
 
-/*
-//Mirror effect
-if(neckPoint.x>=512){
-gap=-512
-}else{
-gap=512
-}
-*/
 
-//Normal effect
-  gap=0;
+//Mirror effect
+translate(width,0); // move to far corner
+scale(-1.0,1.0);    // flip x-axis backwards 
+
+
+
 
 //Draw the stick man!
 for(let layer=0;layer<4;layer++){
@@ -124,21 +125,21 @@ switch(layer){
 
   //head
   ellipseMode(CENTER);
-  ellipse(point[0].position.x+gap,point[0].position.y, sizeHead, sizeHead);
+  ellipse(point[0].position.x,point[0].position.y, sizeHead, sizeHead);
   //body
-  line(neckPoint.x+gap,neckPoint.y,hipPoint.x+gap,hipPoint.y);
+  line(neckPoint.x,neckPoint.y,hipPoint.x,hipPoint.y);
   // Right shoulder
-  line(neckPoint.x+gap,neckPoint.y,point[8].position.x+gap,point[8].position.y);
-  line(point[8].position.x+gap,point[8].position.y,point[10].position.x+gap,point[10].position.y);
+  line(neckPoint.x,neckPoint.y,point[8].position.x,point[8].position.y);
+  line(point[8].position.x,point[8].position.y,point[10].position.x,point[10].position.y);
   // Left shoulder
-  line(neckPoint.x+gap,neckPoint.y,point[7].position.x+gap,point[7].position.y);
-  line(point[7].position.x+gap,point[7].position.y,point[9].position.x+gap,point[9].position.y);
+  line(neckPoint.x,neckPoint.y,point[7].position.x,point[7].position.y);
+  line(point[7].position.x,point[7].position.y,point[9].position.x,point[9].position.y);
   // Right leg
-  line(hipPoint.x+gap,hipPoint.y,point[14].position.x+gap,point[14].position.y);
-  line(point[14].position.x+gap,point[14].position.y,point[16].position.x+gap,point[16].position.y);
+  line(hipPoint.x,hipPoint.y,point[14].position.x,point[14].position.y);
+  line(point[14].position.x,point[14].position.y,point[16].position.x,point[16].position.y);
   // Left leg
-  line(hipPoint.x+gap,hipPoint.y,point[13].position.x+gap,point[13].position.y);
-  line(point[13].position.x+gap,point[13].position.y,point[15].position.x+gap,point[15].position.y);
+  line(hipPoint.x,hipPoint.y,point[13].position.x,point[13].position.y);
+  line(point[13].position.x,point[13].position.y,point[15].position.x,point[15].position.y);
 
 }
 
