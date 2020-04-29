@@ -2,8 +2,9 @@ let video;
 let poseNet;
 let point;
 let gap;
-
 let img;
+let shade;
+
 
 function setup() {
 let canvas=createCanvas(1024,576);
@@ -13,8 +14,7 @@ canvas.position((windowWidth-width)/2,(windowHeight-height)/2);
 img = createImg('https://res.cloudinary.com/jaacker25/image/upload/v1588121596/backImage_mivt8j.png');
 img.hide();
 noFill();
-strokeWeight(15);
-stroke("BLACK")
+
 let constraints = {
   video: {
     mandatory: {
@@ -36,42 +36,91 @@ poseNet.on('pose', results=>{
   }
 });
 video.hide();
+
+shade=0;
+layer=0;
 }
 
 
 function modelLoaded() {
-    console.log('Model Loaded!');
+    console.log('Model Ready!');
   }
 
 
 function draw() {
-  
-  image(video, 0, 0);  
-//background(50);
+
+ //with real time video background 
+// translate(width,0);
+// scale(-1.0,1.0);  
+// image(video, 0, 0);  
+
+ //with static image background 
+ //image(img, 0, 0);   
+
+ //with black solid color background 
+
+  background(0);
  
-gap=0;
   
   if(point){
-    //console.log(point)
- 
 
+    //Get the stick man base color
+    let rColor=255*noise(shade/1.0);
+    let gColor=255-255*noise(shade/1.0);
+    let bColor=255;
 
-//messure circle size
+    
+
+    
+//Pose Points to structure the entire body
  let sizeHead = (((point[3].position.x-point[4].position.x)**2)+((point[3].position.y-point[4].position.y)**2))**.5;
- sizeHead*=1.2;
+  sizeHead*=1.2;
  let hipPoint={x:0,y:0};
- hipPoint.x=(point[12].position.x+point[11].position.x)/2;
- hipPoint.y=(point[12].position.y+point[11].position.y)/2;
+  hipPoint.x=(point[12].position.x+point[11].position.x)/2;
+  hipPoint.y=(point[12].position.y+point[11].position.y)/2;
  let neckPoint={x:0,y:0};
-neckPoint.x=point[0].position.x;
-neckPoint.y=point[0].position.y+(sizeHead/2);
+  neckPoint.x=point[0].position.x;
+  neckPoint.y=point[0].position.y+(sizeHead/2);
 
+/*
+//Mirror effect
 if(neckPoint.x>=512){
 gap=-512
 }else{
 gap=512
 }
+*/
 
+//Normal effect
+  gap=0;
+
+//Draw the stick man!
+for(let layer=0;layer<4;layer++){
+switch(layer){
+
+  case 0: 
+    //1st Shade
+    strokeWeight(50);
+    stroke( rColor,gColor,bColor,11);
+    break;
+  case 1: 
+    //2nd Shade
+    strokeWeight(25);
+    stroke( rColor,gColor,bColor,15);
+    break; 
+  case 2:
+    //Body
+    strokeWeight(12);
+    stroke( rColor,gColor,bColor,200);
+    break;
+  case 3:
+    //Center
+    strokeWeight(4);
+    stroke( 255,255,255,255,255);
+    break;
+  default:
+    break;
+}
 
   //head
   ellipseMode(CENTER);
@@ -90,6 +139,11 @@ gap=512
   // Left leg
   line(hipPoint.x+gap,hipPoint.y,point[13].position.x+gap,point[13].position.y);
   line(point[13].position.x+gap,point[13].position.y,point[15].position.x+gap,point[15].position.y);
+
+}
+
+shade++;
+shade>=1.2?shade=0:null;
 
 }
 

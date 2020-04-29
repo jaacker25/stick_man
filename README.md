@@ -3,9 +3,9 @@
 
 ## Tecnologias Utilizadas
 
-react v.16.13.1
-p5.js v.0.6.0
-ml5 v.0.1.1
+react v.16.13.1<br/>
+p5.js v.0.6.0<br/>
+ml5 v.0.1.1<br/>
 
 ## Hardware
 
@@ -21,7 +21,11 @@ pendiente...
 
 ## Resultado
 
+Mirror Effect
 ![Testing](https://res.cloudinary.com/jaacker25/image/upload/c_scale,w_900/v1588126245/94767632_10216729829694481_4231131355993341952_o_xsiscs.jpg)
+
+Neon Effect
+![Testing](https://res.cloudinary.com/jaacker25/image/upload/c_scale,w_900/v1588140105/Screenshot_from_2020-04-29_01-01-03_mqkeah.png)
 
 pendiente...
 
