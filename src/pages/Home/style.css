@@ -1,0 +1,67 @@
+
+.App {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e5c62c;
+  
+}
+
+.TitleDiv{
+width:100%;
+display:flex;
+justify-content: center;
+margin-top: 35px;
+margin-bottom: 35px;
+}
+
+.Sketch{
+  align-self: center;
+  width: 1024px;
+  height: 576px;
+}
+.p5Canvas{
+  align-self: center;
+  border-radius: 25px;
+  border: solid #e5c62c 5px;
+}
+
+.Control{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnControl{
+  text-align: center;
+  width: 15%;
+  border: solid #0e0e0e 1px;
+  border-radius: 25px;
+  background-color:#e61919 ;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.btnControl:hover{
+  cursor: pointer;
+  background-color: #730d0d;
+  color:#bfbfbf;
+}
+
+.titleBtn{
+  margin: 0;
+}
+.Footer{
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  margin-left: 25px;
+  margin-right: 25px;
+  cursor: pointer;
+}
