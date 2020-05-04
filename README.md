@@ -1,45 +1,42 @@
-## Stick Man App
+# Stick Man App
 
+## [Link del sitio](https://www.stickman-app.xyz/)
 
-## Tecnologias Utilizadas
+## Tecnologias utilizadas
 
-react v.16.13.1<br/>
-p5.js v.0.6.0<br/>
-ml5 v.0.1.1<br/>
+react&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.16.13.1<br/>
+react-p5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.1.3.2<br/>
+ml5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v.0.1.1<br/>
 
-## Hardware
+## Hardware utilizado para la demo
 
 HD Pro Webcam C920
 
 ## Descripcion
 
-Instalación interactiva utilizando el modelo "PoseNet" de machine learning (ML5.js) para la deteccion en tiempo real de la pose humana, creando una figura que interactua con el individuo.  
+Instalación interactiva utilizando el modelo "PoseNet" de machine learning (ML5.js) para la deteccion en tiempo real de la pose humana, creando una figura que interactua con el individuo.
 
-## Funcionamiento
+El juego tiene diferentes escenarios con diferentes efectos para ofrecer disitintas experiencias al usuario, para navegar entre escenarios solo basta con dar click en el boton "Change Mode".
 
-pendiente...
+## Requisitos y Recomendaciones
 
-## Resultado
-
-Mirror Effect
-
-![Testing](https://res.cloudinary.com/jaacker25/image/upload/c_scale,w_900/v1588126245/94767632_10216729829694481_4231131355993341952_o_xsiscs.jpg)
-
-Neon Effect
-
-Video demostrativo Neon/Mirror effect
-(Da click en la imagen)
-<video width="720" height="480" controls>
-  <source src="https://res.cloudinary.com/jaacker25/video/upload/v1588384029/stickMan/final_5eaccfef9723d500154ddc76_738322_eashtl.mp4" type="video/mp4">
-
-Your browser does not support the video tag.
-</video>
-
-[![IMAGE ALT TEXT HERE](https://res.cloudinary.com/jaacker25/image/upload/c_scale,w_900/v1588140105/Screenshot_from_2020-04-29_01-01-03_mqkeah.png)](https://www.youtube.com/watch?v=BaTXz7YQ6Do)
-
-pendiente...
+El juego solo esta habilitado para PC.<br>
+El juego solo esta adaptado para una sola persona.<br>
+Se recomienda contar con una webcam HD para mejores resultados.<br>
+Se recomienda jugar a ua distancia minimo de 2 metros entre el usuario y la webcam o de manera que se muestra la imagen completa de la persona.<br>
+Se recomienda contar con una area despejada para moverse libremente y disfrutar mas del juego.<br>
 
 
-## Para Probar el proyecto
+## Demo
 
-pendiente...
+(Dar click en la imagen para ver video completo)
+
+[![Demo StickManApp](https://res.cloudinary.com/jaacker25/image/upload/v1588631852/stickMan/ezgif-4-bb139d66aa9b_rm4tg4.gif)](https://res.cloudinary.com/jaacker25/video/upload/v1588384029/stickMan/final_5eaccfef9723d500154ddc76_738322_eashtl.mp4)
+
+
+## Equipo de Trabajo
+**Jorge Aguilar** - *Web Developer* - [contact](https://www.linkedin.com/in/jorge-aguilar-castillo/)<br>
+
+## Para jugar
+
+## [www.stickman-app.xyz](https://www.stickman-app.xyz/)
