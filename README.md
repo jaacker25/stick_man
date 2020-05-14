@@ -11,7 +11,9 @@ ml5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 
 ## Hardware utilizado para la demo
 
-HD Pro Webcam C920
+
+HD Pro Webcam C920.
+
 
 ## Descripcion
 
